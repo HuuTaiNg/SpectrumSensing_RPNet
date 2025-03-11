@@ -450,7 +450,7 @@ criterion = nn.CrossEntropyLoss()
 optimizer = Adam(model.parameters(), lr=1e-5)
 
 # ===============================  Training model  ===============================
-num_epochs = 50
+num_epochs = 100
 epoch_saved = 0
 
 best_val_accuracy = 0.0
