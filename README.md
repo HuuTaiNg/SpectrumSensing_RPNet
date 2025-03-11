@@ -16,4 +16,4 @@ Hai-Trang Phuoc Dang, Huu-Tai Nguyen, Quoc-Viet Pham, Van-Ca Phan, and Thien Huy
 
 The dataset can be downloaded from [Kaggle](https://www.kaggle.com/datasets/huutai23012003/j02-tai). Please report if it is not available.
 
-If there are any errors or topics that need to be discussed, please contact [Huu-Tai Nguyen](https://github.com/huutai231) via email at n.huutai231@gmail.com.
+If there are any errors or topics that need to be discussed, please contact [Huu-Tai Nguyen](https://github.com/HuuTaiNg) via email at n.huutai231@gmail.com.
