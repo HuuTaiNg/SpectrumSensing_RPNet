@@ -10,7 +10,7 @@ RPNet preserves feature resolution across multiple processing stages and at diff
 
 ![RPNet architecture.](RPNet.png)
 
-The Python code and datasetprovided here are included in the under-review paper at IEEE Transactions on Vehicular Technology.
+The Python code and dataset provided here are included in the under-review paper at IEEE Transactions on Vehicular Technology.
 
 Hai-Trang Phuoc Dang, Huu-Tai Nguyen, Quoc-Viet Pham, Van-Ca Phan, and Thien Huynh-The, "Efficient Spectrum Sensing with RPNet+CLRu: Reducing Model Size for 5G-LTE Signal Identification," IEEE TVT, 2025.
 
