@@ -86,6 +86,8 @@ import torchvision.models as models
 class RPNet(nn.Module):
     def __init__(self, n_classes):
         super(myModel, self).__init__()
+        self.conv_out =  nn.Conv2d(128, 128, kernel_size=1, stride=1, padding=0)
+        self.conv =  nn.Conv2d(128, 128, kernel_size=1, stride=1, padding=0)
         # Conv Layer
         # =================================================
         self.conv_layer1_1 = nn.Conv2d(3, 128, kernel_size=3, stride=1, padding=1)
@@ -141,11 +143,9 @@ class RPNet(nn.Module):
         self.upsample4 = nn.Upsample(scale_factor=4, mode="bilinear")
         self.upsample8 = nn.Upsample(scale_factor=8, mode="bilinear")
 
-
+        self.batchnorm = nn.BatchNorm2d(256)
         self.conv_last1 =  nn.Conv2d(256, 64, kernel_size=5, stride=1, padding=2)
-        self.batchnorm_last1 = nn.BatchNorm2d(64)
         self.conv_last2 =  nn.Conv2d(64, 16, kernel_size=5, stride=1, padding=2)
-        self.batchnorm_last2 = nn.BatchNorm2d(16)
         self.conv_last3 =  nn.Conv2d(16, n_classes, kernel_size=5, stride=1, padding=2)
         
     def forward(self, x):
