@@ -59,8 +59,8 @@ train_transform = transforms.Compose([
 
 # Creat dataset
 train_dataset = SemanticSegmentationDataset(
-    image_dir='C:\\Users\\dataset\\train\\input',
-    label_dir='C:\\Users\\dataset\\train\\label',
+    image_dir='\\dataset\\train\\input',
+    label_dir='\\dataset\\train\\label',
     transform=train_transform
 )
 
@@ -90,8 +90,9 @@ import torchvision.models as models
 
 class RPNet_CLRu(nn.Module):
     def __init__(self, n_classes):
-        super(myModel, self).__init__()
-
+        super(RPNet_CLRu, self).__init__()
+        self.conv_out =  nn.Conv2d(128, 128, kernel_size=1, stride=1, padding=0)
+        self.conv =  nn.Conv2d(128, 128, kernel_size=1, stride=1, padding=0)
         # Conv Layer
         self.conv_layer1_1 = nn.Conv2d(3, 128, kernel_size=3, stride=1, padding=1)
         self.conv_layer1_2 = nn.Conv2d(128, 128, kernel_size=3, stride=1, padding=1)
@@ -101,10 +102,9 @@ class RPNet_CLRu(nn.Module):
         self.upsample4 = nn.Upsample(scale_factor=4, mode="bilinear")
         self.upsample8 = nn.Upsample(scale_factor=8, mode="bilinear")
 
+        self.batchnorm = nn.BatchNorm2d(256)
         self.conv_last1 =  nn.Conv2d(256, 64, kernel_size=5, stride=1, padding=2)
-        self.batchnorm_last1 = nn.BatchNorm2d(64)
         self.conv_last2 =  nn.Conv2d(64, 16, kernel_size=5, stride=1, padding=2)
-        self.batchnorm_last2 = nn.BatchNorm2d(16)
         self.conv_last3 =  nn.Conv2d(16, n_classes, kernel_size=5, stride=1, padding=2)
         
     def forward(self, x):
@@ -295,7 +295,7 @@ class RPNet_CLRu(nn.Module):
         
         x_ = self.conv(x_)
         x = torch.cat([x_, x1], dim=1)
-        x1 = self.batchnorm2(x)
+        x1 = self.batchnorm(x)
         x1 = F.relu(x1)
         
         x = self.conv_last1(x1)
