@@ -85,7 +85,7 @@ import torchvision.models as models
 
 class RPNet(nn.Module):
     def __init__(self, n_classes):
-        super(myModel, self).__init__()
+        super(RPNet, self).__init__()
         self.conv_out =  nn.Conv2d(128, 128, kernel_size=1, stride=1, padding=0)
         self.conv =  nn.Conv2d(128, 128, kernel_size=1, stride=1, padding=0)
         # Conv Layer
@@ -336,7 +336,7 @@ class RPNet(nn.Module):
         
         x_ = self.conv(x_)
         x = torch.cat([x_, x1], dim=1)
-        x1 = self.batchnorm2(x)
+        x1 = self.batchnorm(x)
         x1 = F.relu(x1)
         
         x = self.conv_last1(x1)
