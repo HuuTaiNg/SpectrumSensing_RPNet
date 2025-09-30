@@ -1,4 +1,4 @@
-# Efficient Spectrum Sensing  for 5G-LTE Signal Identification
+# Compact Spectrum Sensing  for 5G-LTE Signal Identification
 
 ![Illustration of a 5G-LTE network with DL-based spectrum sensing.](framework.png)
 
@@ -10,9 +10,9 @@ RPNet preserves feature resolution across multiple processing stages and at diff
 
 ![RPNet architecture.](RPNet.png)
 
-The Python code and dataset provided here are included in the under-review paper at IEEE Transactions on Vehicular Technology.
+The Python code and dataset provided here are included in the accepted paper at IEEE Transactions on Vehicular Technology.
 
-Hai-Trang Phuoc Dang, Huu-Tai Nguyen, Quoc-Viet Pham, Van-Ca Phan, and Thien Huynh-The, "Efficient Spectrum Sensing with RPNet+CLRu: Reducing Model Size for 5G-LTE Signal Identification," IEEE TVT, 2025.
+Hai-Trang Phuoc Dang, Huu-Tai Nguyen, Quoc-Viet Pham, Van-Ca Phan, and Thien Huynh-The, "Compact Spectrum Sensing with RPNet+CLRu: Reducing Model Size for 5G-LTE Signal Identification," IEEE TVT, 2025.
 
 The dataset can be downloaded from [Kaggle](https://www.kaggle.com/datasets/huutai23012003/j02-tai). Please report if it is not available.
 
